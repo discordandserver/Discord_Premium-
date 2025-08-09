@@ -55,13 +55,56 @@
             z-index: 1;
         }
         
+        /* تحسينات للهاتف - بداية */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 0;
             border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: relative;
         }
+        
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+        }
+        
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: var(--discord-darker);
+            z-index: 1000;
+            padding: 20px;
+            transition: right 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            border-left: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .mobile-menu a {
+            color: var(--discord-text);
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 4px;
+            transition: background 0.3s;
+            font-size: 18px;
+        }
+        
+        .mobile-menu a:hover {
+            background: rgba(88, 101, 242, 0.2);
+        }
+        
+        .mobile-menu.active {
+            right: 0;
+        }
+        /* تحسينات للهاتف - نهاية */
         
         .logo {
             display: flex;
@@ -568,9 +611,11 @@
             to { opacity: 0; }
         }
         
+        /* تحسينات للهاتف - بداية */
         @media (max-width: 768px) {
             .hack-terminal {
                 height: 200px;
+                font-size: 12px; /* إضافة حجم خط أصغر للشاشات الصغيرة */
             }
             
             .hack-header h2 {
@@ -617,14 +662,119 @@
                 display: none;
             }
             
+            .hamburger {
+                display: block;
+            }
+            
             .logo h1 {
                 font-size: 20px;
             }
+            
+            /* تعديل حجم الخط في بعض العناصر الأخرى */
+            .terminal-line {
+                font-size: 12px;
+            }
+            
+            .progress-text {
+                font-size: 12px;
+            }
+            
+            .hack-buttons {
+                flex-direction: column; /* جعل الأزرار في عمود على الهواتف */
+            }
+            
+            .hack-container, .nitro-container {
+                width: 100%;
+                margin: 10px 0;
+                padding: 15px;
+            }
+            
+            .nitro-header {
+                padding: 25px 15px;
+            }
+            
+            .nitro-content {
+                padding: 20px 15px;
+            }
+            
+            .nitro-form {
+                padding: 20px;
+            }
+            
+            .nitro-badge {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin: 0 auto 20px;
+                transform: rotate(0);
+                width: max-content;
+            }
+            
+            .glow {
+                width: 400px;
+                height: 400px;
+            }
+            
+            .modal-header h3 {
+                font-size: 20px;
+            }
+            
+            .modal-content input {
+                font-size: 14px;
+                padding: 12px 12px 12px 40px;
+            }
         }
+        
+        @media (max-width: 480px) {
+            .hack-terminal {
+                height: 150px;
+            }
+            
+            .hack-header h2 {
+                font-size: 20px;
+            }
+            
+            .nitro-header h2 {
+                font-size: 22px;
+            }
+            
+            .nitro-header p {
+                font-size: 14px;
+            }
+            
+            .logo h1 {
+                font-size: 18px;
+            }
+            
+            .feature h3 {
+                font-size: 18px;
+            }
+            
+            .feature p {
+                font-size: 13px;
+            }
+            
+            .btn-claim {
+                padding: 14px;
+                font-size: 16px;
+            }
+            
+            .glow {
+                width: 300px;
+                height: 300px;
+            }
+        }
+        /* تحسينات للهاتف - نهاية */
     </style>
 </head>
 <body>
     <div class="glow"></div>
+    
+    <!-- قائمة الجوال المنبثقة -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#" onclick="showPage('page1'); closeMenu()">اختراق الحساب</a>
+        <a href="#" onclick="showPage('page2'); closeMenu()">النيترو المجاني</a>
+    </div>
     
     <div class="container">
         <header>
@@ -638,6 +788,10 @@
                     <li><a href="#" onclick="showPage('page2')">النيترو المجاني</a></li>
                 </ul>
             </nav>
+            <!-- زر قائمة الجوال -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
         </header>
         
         <!-- Page 1: Hacking Simulation -->
@@ -970,6 +1124,17 @@
                 closeModal();
             }
         });
+        
+        // Mobile menu functions
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+        
+        function closeMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.remove('active');
+        }
     </script>
 </body>
 </html>
